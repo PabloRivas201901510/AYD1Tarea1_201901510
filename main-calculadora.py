@@ -18,6 +18,12 @@ def suma():
     num2 = int(request.json['num2'])
     return str(num1+num2)
 
+@app.route('/resta', methods = ['POST'])
+def resta():
+    num1 = int(request.json['num1'])
+    num2 = int(request.json['num2'])
+    return str(num1-num2)
+
 # STARTING THE SERVER
 if (__name__ == '__main__'):
     app.run(host='0.0.0.0', port = 3000, debug = True)
